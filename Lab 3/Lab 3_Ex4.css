@@ -1,0 +1,39 @@
+body {
+	font-family: sans-serif;
+	font-size: 16px;
+}
+#title{
+	text-align: left;
+	color: #AA9881;
+}
+#cl5 {
+	color: #ff2039;
+}
+.cl1 {
+	color: #E1F0A5;
+}
+.cl1 .dot {
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: green;
+	margin-right: 2px;
+}
+.cl2 {
+	color: #bbbbbb;
+}
+.cl4 {
+	color: #e7e7e7;
+	padding-right: 25px;
+	font-style: italic;
+}
+#la {
+	padding-bottom: 20px;
+}
+#name {
+	padding-bottom: 20px;
+}
+#cl3 {
+	color: #D16A1D;
+}

@@ -1,0 +1,136 @@
+.div {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+}
+.content {
+	max-width: 63%;
+	width: 63%;
+	box-sizing: border-box;
+	margin-left: 80px;
+}
+.sidebar {
+	max-width: 37%;
+	width: 37%;
+	margin-left: 30px;
+}
+.content .rows {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	margin-bottom: 50px;
+}
+.products {
+	max-width: 25%;
+	width: 25%;
+	box-sizing: border-box;
+	background-color: #f8f8f8;
+	padding: 0 10px;
+}
+.products img {
+	max-width: 100%;
+}
+.products .discription {
+	color: #3F4751;
+	font-weight: 700;
+	padding: 15px 0 15px 10px;
+	font-size: 16px;
+}
+.products .code {
+	color: #652D92;
+	font-weight: 700;
+	text-transform: uppercase;
+	padding: 15px 0 15px 10px;
+}
+.products .prePrice {
+	text-decoration: line-through;
+	color: #ADB1B2;
+	margin: 0 10px;
+	font-weight: 700;
+}
+.products .price {
+	color: red;
+	margin: 0 10px;
+	font-weight: 700;
+}
+.spvx {
+	position: relative;
+}
+.spvx a ,.news a{
+	text-decoration: none;
+}
+.spvx h6 , .news h6{
+	color: #3F4751;
+	font-size: 18px;
+	font-weight: 700;
+	margin-top: 20px;
+}
+.spvx .Price {
+	color: red;
+	font-weight: 700;
+
+}
+.spvx .Price1 {
+	margin-top: 50px;
+	color: red;
+	font-weight: 700;
+}
+.discount {
+	background-color: red;
+	position: absolute;
+	bottom: 230px;
+	right: 10px;
+	width: 38px;
+	text-align: center;
+	height: 38px;
+	color: #fff;
+	font-weight: 700;
+}
+.news {
+	margin: 50px 0;
+}
+.line {
+	border: 1px solid #bebebe;
+	background-color: #bebebe;
+}
+.date {
+	text-decoration: none;
+	margin-right: 30px;
+	color: #ACB2B0;
+}
+.Tittle {
+	margin-bottom: 20px;
+	border: 2px dashed #000;
+	border-left: 6px solid #763AAA;
+}
+.Tittle h4 {
+	text-transform: uppercase;
+	font-weight: 700;
+	color: #2C3E50;
+	padding: 10px ;
+}
+@media only screen and (max-device-width : 400px){
+	.div {
+		flex-direction: column;
+		flex-wrap: nowrap;
+	}
+	.content ,.sidebar {
+		max-width: 100%;
+		width: 100%;
+	}
+	.rows {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	.rows .products {
+		width: 50%;
+		max-width: 50%;
+		padding: 0px;
+	}
+	.content{
+		margin: 0px;
+	}
+	.sidebar{
+		margin-left: 0px;
+	}
+}

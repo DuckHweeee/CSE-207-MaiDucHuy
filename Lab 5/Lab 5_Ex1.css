@@ -1,0 +1,123 @@
+.top {
+	background-color: #2D3E50;
+	padding: 20px 0px;
+	color: #fff;
+	font-size: 14px;
+}
+.top a {
+	text-decoration: none;
+	color: #fff;
+	font-weight: 700;
+}
+.middle{
+	padding-top: 15px;
+	padding-bottom: 15px;
+	height: 120px;
+}
+.middle img {
+	padding: 10px 10px 30px 10px;
+	max-width: 100%;
+	width: 100%;
+}
+.middle .search {
+	margin-top: 25px;
+}
+.middle .xd{
+	background-color: tomato;
+	height: 100%;
+	width: 100%;
+	border-radius: 50%;
+	color: white;
+
+}
+.middle shopping-cart-group {
+	margin-top: 20px;
+}
+.middle .media-body{
+	margin-top: 20px;
+}
+.middle .price {
+	color: tomato;
+	font-weight: bold;
+	font-size: 18px;
+	margin-top: -7px;
+}
+
+.middle h5{
+	font-size: 15px;
+	color: lightgray;
+}
+/*menu*/
+nav.menu-group {
+	background-color: #652D92;
+}
+.menu-group ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+ul.desktop-menu > li{
+		display:inline-block ;
+		position: relative;
+}
+ul.desktop-menu > li > a{
+	color: #fff;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: 16px;
+	font-weight: 700;
+	display: inline-block;
+	padding: 10px 10px;
+} 
+ul.desktop-menu > li:hover > a {
+	background-color: #763AA8;
+}
+ul.desktop-menu > li:hover .submenu {
+	display: block;
+}
+.submenu{
+	display: none;
+	position: absolute;
+	padding: 10px;
+	top: 45px;
+	left: 0;
+	width: 200px;
+	box-shadow: 0 0 2px 2px #ddd;
+}
+
+.submenu a {
+	text-transform: uppercase;
+	color: purple;
+	display: block;
+	padding: 10px;
+	font-weight: 700;
+	text-decoration: none;
+}
+.submenu li:hover a{
+	background-color: #652D92;
+	color: #fff;
+}
+.mobilemenu {
+	display: none;
+}
+
+@media (max-width: 400px){
+	.desktop-menu{
+		display: none;
+	}
+	.mobilemenu {
+		display: block;
+		padding: 10px;
+		color: #fff;
+		font-weight: bold;
+		font-size: 18px;
+		background-color: purple !important;
+	}
+	.mobilemenu_icon {
+		display: inline-block;
+		border: 1px solid #fff;
+		padding: 5px;
+		cursor: pointer;
+	}
+	
+} 

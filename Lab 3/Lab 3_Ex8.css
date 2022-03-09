@@ -1,0 +1,33 @@
+body {
+	font-family: sans-serif;
+	font-size: 16px;
+}
+.product{
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: column;
+	width: 420px;
+	height: 580px;
+	box-shadow: 0px -1px 1px 2px #595959;
+}
+.image {
+	
+	height: 65%;
+	text-align: center;
+	margin-top: 35px;
+}
+.image img{
+	width: 85%;
+	max-width: 100%;
+}
+.discription {
+	height: 35%;
+	margin-left: 10px	;
+}
+.discription h3 {
+	text-transform: capitalize;
+	font-weight: 400;
+}
+.discription b {
+	color: #E8330D;
+}

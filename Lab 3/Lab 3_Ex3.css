@@ -1,0 +1,13 @@
+#hr {
+	width: 90%px;
+	height: 5px;
+	margin-left: 25px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	color: #999;
+	}
+legend {
+	width: inherit;
+	padding: 0 10px;
+	border-bottom: none;
+	}

@@ -5,12 +5,31 @@
 </head>
 <body>
 	<form>
-		<table border="1">
+		<table>
 			<tr>
-			<p>Member name : <input type="text" name="nameTxb"></p>
-			<p>Email : <input type="text" name="emailTxb"></p>
-			<p>School : <input type="text" name="schoolTxb"></p>
-			<input type="button" value="Submit">
+			   <td><label for="name">Member Name: </label></td>
+			   <td><input type="text" id="name" name="name"required=""></td>
+			   <td class="req">*req</td>
+			</tr>
+
+			<tr>
+			   <td><label for="email">Email: </label></td>
+			   <td><input type="email" id="email" name="email" required=""></td>
+			   <td class="req">*req</td>
+			</tr>
+
+			<tr>
+			   <td><label for="school">School: </label></td>
+			   <td><input type="text" id="school" name="school" required=""></td>
+			   <td class="req">*req</td>
+			</tr>
+
+			<tr>
+				<td colspan="3">
+					<button type="submit" name="submit">
+						<img src="images/submitx.jpg" alt="submit-img" style="height: 20px; width: 80px;">
+					</button>
+				</td>
 			</tr>
 		</table>
 	</form>
