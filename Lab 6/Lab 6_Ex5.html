@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>problem_5</title>
+</head>
+<body>
+	<script type="text/javascript">
+		let products = [
+			{
+				ID:1,
+				productsName :"ss1",
+				Quantity:10,
+				Price:10000,
+				imageURL:"null"
+			},
+			{
+				ID:2,
+				productsName : "ss2",
+				Quantity:10,
+				Price:1000,
+				imageURL:"null"
+			},
+			{
+				ID:3,
+				productsName : "ss1",
+				Quantity:10,
+				Price:1012000,
+				imageURL:"null"
+			},
+		];
+
+		let afterpros = [
+			{
+				ID:5,
+				productsName : "ss12",
+				Quantity:10,
+				Price:1023000,
+				imageURL:"null"
+			},
+		];
+
+		let beforpros = [
+			{
+				ID:20,
+				productsName : "ss102",
+				Quantity:100,
+				Price:100,
+				imageURL:"null"
+			},
+		];
+
+		//add to top.
+		products.unshift(...beforpros);
+		console.table(products);
+
+		// add to tail.
+		products.push(...afterpros);
+		console.table(products);
+
+		// print
+		console.log(products);
+
+		// searching names
+		var res = products.find(a=>{
+			return a.productsName === "ss102"
+		});
+		console.log(res);
+
+		// remove by ID. 
+		let delID = products.map(function (b) {
+			return b.ID;
+		}).indexOf(20);
+		products.splice(delID,1);
+		console.table(products);
+
+		// Sort the list by name
+		let cp = function compare(x,y){
+			if(x.productsName < y.productsName){
+				return -1;
+			}
+			if(x.productsName > y.productsName){
+				return 1
+			}
+			return 0;
+		}
+
+		products.sort(cp);
+		console.table(products);
+	</script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+	<title>problem_2</title>
+</head>
+<body>
+	<h3>problem2</h3>
+	<table class="table table-bordered">
+		<tr>
+			<th>str</th>
+			<th>parseInt(str)</th>
+			<th>parseFloat(str)</th>
+			<th>Number(str)</th>
+			<th>+str</th>
+			<th>str | 0</th>
+		</tr>
+
+		<tr>
+			<td id="col10"></td>
+			<td id="col11"></td>
+			<td id="col12"></td>
+			<td id="col13"></td>
+			<td id="col14"></td>
+			<td id="col15"></td>
+		</tr>
+
+		<tr>
+			<td id="col16"></td>
+			<td id="col17"></td>
+			<td id="col18"></td>
+			<td id="col19"></td>
+			<td id="col20"></td>
+			<td id="col21"></td>
+		</tr>
+
+		<tr>
+			<td id="col22"></td>
+			<td id="col23"></td>
+			<td id="col24"></td>
+			<td id="col25"></td>
+			<td id="col26"></td>
+			<td id="col27"></td>
+		</tr>
+
+		<tr>
+			<td id="col28"></td>
+			<td id="col29"></td>
+			<td id="col30"></td>
+			<td id="col31"></td>
+			<td id="col32"></td>
+			<td id="col33"></td>
+		</tr>
+
+		<tr>
+			<td id="col34"></td>
+			<td id="col35"></td>
+			<td id="col36"></td>
+			<td id="col37"></td>
+			<td id="col38"></td>
+			<td id="col39"></td>
+		</tr>
+
+		<tr>
+			<td id="col40"></td>
+			<td id="col41"></td>
+			<td id="col42"></td>
+			<td id="col43"></td>
+			<td id="col44"></td>
+			<td id="col45"></td>
+		</tr>
+	</table>
+	<script type="text/javascript">
+		//row1
+
+		let r1 = "1234";
+		intr1 = Number.parseInt(r1);
+		floatr1 = Number.parseFloat(r1);
+		numr1 = Number(r1);
+		valuer1= r1 | 0;
+
+		document.getElementById("col10").innerHTML = r1;
+		document.getElementById("col11").innerHTML = intr1;
+		document.getElementById("col12").innerHTML = floatr1;
+		document.getElementById("col13").innerHTML = numr1;
+
+		if(+r1){
+			document.getElementById("col14").innerHTML = r1 +" is a number";
+		}else {
+			document.getElementById("col14").innerHTML = r1 +" not a number";
+		}
+		document.getElementById("col15").innerHTML = valuer1;
+
+		//row2
+
+		let r2 = "1234abc";
+		intr2 = Number.parseInt(r2);
+		floatr2 = Number.parseFloat(r2);
+		numr2 = Number(r2);
+		valuer2= r2 | 0;
+
+		document.getElementById("col16").innerHTML = r2;
+		document.getElementById("col17").innerHTML = intr2;
+		document.getElementById("col18").innerHTML = floatr2;
+		document.getElementById("col19").innerHTML = numr2;
+
+		if(+r2){
+			document.getElementById("col20").innerHTML = r2 +" is a number";
+		}else {
+			document.getElementById("col20").innerHTML = r2 +" is not a number";
+		}
+		document.getElementById("col21").innerHTML = valuer2;
+
+		//row3
+
+		let r3 = "0.15";
+		intr3 = Number.parseInt(r3);
+		floatr3 = Number.parseFloat(r3);
+		numr3 = Number(r3);
+		valuer3= r3 | 0;
+
+		document.getElementById("col22").innerHTML = r3;
+		document.getElementById("col23").innerHTML = intr3;
+		document.getElementById("col24").innerHTML = floatr3;
+		document.getElementById("col25").innerHTML = numr3;
+
+		if(+r3){
+			document.getElementById("col26").innerHTML = r3 +" is a number";
+		}else {
+			document.getElementById("col26").innerHTML = r3 +" not a number";
+		}
+		document.getElementById("col27").innerHTML = valuer3;
+		
+		//row4
+
+		let r4 = "3.14ivan";
+		intr4 = Number.parseInt(r4);
+		floatr4 = Number.parseFloat(r4);
+		numr4 = Number(r4);
+		valuer4= r4 | 0;
+
+		document.getElementById("col28").innerHTML = r4;
+		document.getElementById("col29").innerHTML = intr4;
+		document.getElementById("col30").innerHTML = floatr4;
+		document.getElementById("col31").innerHTML = numr4;
+
+		if(+r4){
+			document.getElementById("col32").innerHTML = r4 +" is a number";
+		}else {
+			document.getElementById("col32").innerHTML = r4 +" is not a number";
+		}
+		document.getElementById("col33").innerHTML = valuer4;
+		
+		//row5
+
+		let r5 = "Infinity";
+		intr5 = Number.parseInt(r5);
+		floatr5= Number.parseFloat(r5);
+		numr5 = Number(r5);
+		valuer5= r5 | 0;
+
+		document.getElementById("col34").innerHTML = r5;
+		document.getElementById("col35").innerHTML = intr5;
+		document.getElementById("col36").innerHTML = floatr5;
+		document.getElementById("col37").innerHTML = numr5;
+
+		if(+r5){
+			document.getElementById("col38").innerHTML = r5 +" is a number";
+		}else {
+			document.getElementById("col38").innerHTML = r5 +" not a number";
+		}
+		document.getElementById("col39").innerHTML = valuer5;
+
+		//row6
+
+		let r6 = "999999999999999999999";
+		intr6 = Number.parseInt(r6);
+		floatr6 = Number.parseFloat(r6);
+		numr6 = Number(r6);
+		valuer6= r6 | 0;
+
+		document.getElementById("col40").innerHTML = r6;
+		document.getElementById("col41").innerHTML = intr6;
+		document.getElementById("col42").innerHTML = floatr6;
+		document.getElementById("col43").innerHTML = numr6;
+
+		if(+r6){
+			document.getElementById("col44").innerHTML = r6 +" is a number";
+		}else {
+			document.getElementById("col44").innerHTML = r6 +" is not a number";
+		}
+		document.getElementById("col45").innerHTML = valuer6;
+		
+		
+	</script>
+</body>
+</html>
