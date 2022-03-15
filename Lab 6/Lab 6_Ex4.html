@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>prob4</title>
+</head>
+<body>
+	<script type="text/javascript">
+		let products = [
+			{
+				name:"apple",
+				ImageURL:"null",
+				Price:"1234"
+			},
+			{
+				name:"water",
+				ImageURL:"null",
+				Price:"4321"
+			},
+			{
+				name:"kit",
+				ImageURL:"null",
+				Price:"32332"
+			},
+			{
+				name:"grapees",
+				ImageURL:"null",
+				Price:"322312"
+			}
+		];
+
+		products.sort(function (x ,y) {
+			return x.Price - y.Price;
+		});
+		console.log(products);
+	</script>
+</body>
+</html>
