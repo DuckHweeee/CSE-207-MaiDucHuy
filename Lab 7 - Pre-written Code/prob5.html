@@ -1,0 +1,43 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="prob5.css">
+</head>
+<body>
+
+
+	<div class="section">
+	  	<div class="row">
+	    	<div class="cols">
+		      	<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiu7bSrAzu9CUEr8AKoj80iv6ojV3FkbU7osw-D6LVDxiZ7xQow2z89RA9Q-Dt43rlVPI&usqp=CAU" style="width:100%" alt="images" onclick="abc(this);">
+		    </div>
+		    <div class="cols">
+		      	<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7e-Fec1fAShPssYQ7Zp1FryzSG0WdvVgExRqMMKwX-HIh6uNgsLWY_UwrT9JwiE89wxg&usqp=CAU" style="width:100%" alt="images" onclick="abc(this);">
+		    </div>
+		    <div class="cols">
+		      	<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGZFHYsiFClKPiHL9SrsMaIKUxD6D4rTP4X6w39eZugALTN6arqI8Q69be4ibJEN9F4EE&usqp=CAU" alt="images" style="width:100%" onclick="abc(this);">
+		    </div>
+		    <div class="cols">
+		      	<img src="https://d25tv1xepz39hi.cloudfront.net/2017-08-21/files/landscape-photography_1645.jpg" style="width:100%" alt="images" onclick="abc(this);">
+		    </div>
+	  	</div>
+
+	 	<div class="container">
+		    <span onclick="this.parentElement.style.display='none'" class="exit">&times;</span>
+		    <img id="zooms" style="width:100%">
+		    <div id="imgtext"></div>
+		</div>
+	</div>
+
+<script>
+	function abc(imgs) {
+		var zoom = document.getElementById("zooms");
+		var imgText = document.getElementById("imgtext");
+		zoom.src = imgs.src;
+		imgText.innerHTML = imgs.alt;
+		zoom.parentElement.style.display = "block";
+	}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+* {
+  	box-sizing: border-box;
+}
+
+
+.section{
+  	width: 1000px;
+  	max-width: 100%;
+  	height: auto;
+  	max-height: 100%;
+  	align-content: center;
+  	padding-left: 100px;
+}
+
+.cols {
+  float: left;
+ 	width: 25%;
+  padding: 10px;
+}
+
+
+.cols img {
+  	cursor: pointer; 
+}
+
+.cols img:hover {
+  	opacity: 1;
+}
+
+
+.row:after {
+  	content: "";
+  	display: table;
+  	clear: both;
+}
+
+
+.container {
+  	position: relative;
+  	display: none;
+}
+
+
+#imgtext {
+  	position: absolute;
+  	bottom: 15px;
+  	left: 15px;
+  	color: white;
+  	font-size: 20px;
+}
+
+
+.exit {
+	position: absolute;
+	top: 10px;
+	right: 15px;
+	color: white;
+	font-size: 30px;
+	cursor: pointer;
+	font-weight: 700;
+}

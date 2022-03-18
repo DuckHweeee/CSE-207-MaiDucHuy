@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Problem_6</title>
+	<style type="text/css">
+		#hidebackground{
+			width: 100%;
+			height: 100%;
+			position: fixed;
+			display: none;
+			top: 0px;
+			left: 0px;
+			z-index: 999;
+			cursor: pointer;
+			background-color: rgba(0, 0, 0, 0.5);
+		}
+		#text{
+			position: absolute;
+			top: 120px;
+			left: 50px;
+			font-size: 20px;
+			text-align: center;
+			color: #000;
+		}
+	</style>
+	<script type="text/javascript">
+		function turnon() {
+			document.getElementById('hidebackground').style.display = "block";
+		}
+		function turnoff() {
+			document.getElementById('hidebackground').style.display ="none";
+		}
+	</script>
+</head>
+<body>
+	<div >
+		<button onclick="turnon()">clicked the Button</button>
+	</div>
+	<div id="hidebackground">
+		<div id="text">
+			<h3>fade and scale example</h3>
+			<h4>hallo</h4>
+			<button onclick="turnoff()">exit</button>
+		</div>
+	</div>
+	
+
+	
+</body>
+</html>

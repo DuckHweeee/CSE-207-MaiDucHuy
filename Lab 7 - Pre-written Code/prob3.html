@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Problem_3</title>
+	<style type="text/css">
+		#par{
+			width: 100%;
+			background-color: grey;
+		}
+		#myBar{
+			width: 10%;
+			height: 30px;
+			background-color:green;
+			color: #fff;
+			height: 40px;
+			line-height: 40px;
+		}
+	</style>
+</head>
+<body>
+	<div id="par">
+		<div id="myBar">0%</div>
+	</div>
+	<br><div>
+		<button onclick="run()">Click me</button>
+	</div>
+
+	<script type="text/javascript">
+		let i = 0
+		function run() {
+			if( i == 0){
+				i = 1;
+				let x = document.getElementById('myBar');
+				let width = 0;
+				let id = setInterval(frame,800);
+				function frame(){
+					if(width ==100){
+						clearInterval(id);
+						i = 0;
+					}else {
+						width++;
+						x.style.width = width + "%";
+						x.innerHTML = width + "%";
+					}
+				}
+			}
+		}
+	</script>
+</body>
+</html>

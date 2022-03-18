@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Problem_7</title>
+<style>
+.alert {
+  	padding: 20px;
+  	background-color: red;
+  	color: white;
+  	opacity: 1;
+  	margin-bottom: 15px;
+}
+
+.alert.success {
+	background-color: seagreen;
+}
+.alert.info {
+	background-color: skyblue;
+}
+.alert.warning {
+	background-color: orange;
+}
+
+.closebtn {
+  	margin-left: 15px;
+  	color: white;
+  	font-weight: bold;
+  	float: right;
+  	font-size: 22px;
+  	line-height: 20px;
+  	cursor: pointer;
+}
+
+.closebtn:hover {
+  	color: black;
+}
+</style>
+</head>
+<body>
+
+	<div class="alert">
+	  	<span class="closebtn">&times;</span>  
+	  	<strong>Danger!</strong> Indicates a dangerous or potentially negative action.
+	</div>
+
+	<div class="alert success">
+	  	<span class="closebtn">&times;</span>  
+	  	<strong>Success!</strong> Indicates a successful or positive action.
+	</div>
+
+	<div class="alert info">
+	  	<span class="closebtn">&times;</span>  
+	  	<strong>Info!</strong> Indicates a neutral informative change or action.
+	</div>
+
+	<div class="alert warning">
+	  	<span class="closebtn">&times;</span>  
+	  	<strong>Warning!</strong> Indicates a warning that might need attention.
+	</div>
+
+<script>
+	var close = document.getElementsByClassName("closebtn");
+	var i;
+
+	for (i = 0; i < close.length; i++) {
+	  	close[i].onclick = function(){
+	    var div = this.parentElement;
+	    div.style.opacity = "0";
+	    setTimeout(function(){ div.style.display = "none"; }, 100);
+	  }
+	}
+</script>
+
+</body>
+</html>

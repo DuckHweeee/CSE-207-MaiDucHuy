@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="prob4.css">
+</head>
+<body>
+
+<div id="myDIV" class="header">
+  <h2 style="margin:5px">My To Do List</h2>
+  <input type="text" id="myInput" placeholder="Title...">
+  <span onclick="newcontent()" class="addnewcontents">Add</span>
+</div>
+
+<ul id="myUL">
+  <li>1</li>
+  <li class="checked">2</li>
+  <li>3</li>
+  <li>4</li>
+  <li>5</li>
+  <li>6</li>
+</ul>
+
+<script>
+	var myNodelist = document.getElementsByTagName("LI");
+	var i;
+	for (i = 0; i < myNodelist.length; i++) {
+	  	var span = document.createElement("SPAN");
+	  	var txt = document.createTextNode("\u00D7");
+	  	span.className = "close";
+	 	span.appendChild(txt);
+	 	myNodelist[i].appendChild(span);
+	}
+
+	var close = document.getElementsByClassName("close");
+	var i;
+	for (i = 0; i < close.length; i++) {
+	  	close[i].onclick = function() {
+	  	  	var div = this.parentElement;
+	    	div.style.display = "none";
+	  	}
+	}
+
+	var list = document.querySelector('ul');
+	list.addEventListener('click', function(ev) {
+	  	if (ev.target.tagName === 'LI') {
+	    	ev.target.classList.toggle('checked');
+	  	}
+	}, false);
+
+
+	function newcontent() {
+		var li = document.createElement("li");
+		var inputValue = document.getElementById("myInput").value;
+		var t = document.createTextNode(inputValue);
+		li.appendChild(t);
+		if (inputValue === '') {
+		    alert("You must write something!");
+		}else {
+		    document.getElementById("myUL").appendChild(li);
+		}
+	  	document.getElementById("myInput").value = "";
+
+		var span = document.createElement("SPAN");
+		var txt = document.createTextNode("\u00D7");
+		span.className = "close";
+		span.appendChild(txt);
+		li.appendChild(span);
+
+	  	for (i = 0; i < close.length; i++) {
+	    	close[i].onclick = function() {
+	     		var div = this.parentElement;
+	      		div.style.display = "none";
+	    	}
+	  	}
+	}
+</script>
+
+</body>
+</html>
