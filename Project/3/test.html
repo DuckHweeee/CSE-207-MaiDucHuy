@@ -3,7 +3,9 @@
 <head>
 	<meta charset="utf-8">
 	<title>cupcake</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="cupcake.css">
+	<script src="https://kit.fontawesome.com/be15ecbbbf.js" crossorigin="anonymous"></script>
 </head>
 <body>
 	<!-- Block1 -->
@@ -12,48 +14,72 @@
 			<div class="logo">
 				<img src="images/D.Cake.png">
 			</div>
+			<div class="menubar">
+				<nav class="menu-group">
+					
+						<ul class="desktop-menu">
+							<li><a href="#">Home</a></li>
+							<li>
+								<a href="#">About us</a><span class="drop-down"><i class="fa-solid fa-caret-down"></i></span>
+								<ul class="submenu">
+									<li><a href="#">History</a></li>
+									<li><a href="#">Contact</a></li>
+									<li><a href="#">Our team</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Services</a></li>
+							<li><a href="#">Menu</a></li>
+							<li><a href="#">Prices</a></li>
+							<li><a href="#">Gallery</a></li>
+							<li><a href="#">Team</a></li>
+							<li><a href="#">Contact</a></li>
+						</ul>
+						
+				</nav>
+			</div>
 		</div>
-		<div class="group_menu">
-			<ul>
-				<li><a href="#"></a>Home</li>
-				<li><a href="#"></a>About us</li>
-				<li><a href="#"></a>Services</li>
-				<li><a href="#"></a>Menu</li>
-				<li><a href="#"></a>Prices</li>
-				<li><a href="#"></a>Gallery</li>
-				<li><a href="#"></a>Team</li>
-				<li><a href="#"></a>Contact</li>
-			</ul>
-		</div>	
 	
-
-		<div class="middle">
-			<!-- <img src="images/slide2.jpg" loading="lazy">
-			<img src="images/slide-down2.png"> -->
-		</div>
-
+		<!-- <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+			<div class="carousel-inner">
+			    <div class="carousel-item active">
+			        <img src="images/slide1.jpg" class="d-block w-100" alt="slide1">
+			    </div>
+			    <div class="carousel-item">
+			      <img src="images/slide2.jpg" class="d-block w-100" alt="slide2">
+			    </div>
+			    <div class="carousel-item">
+			      <img src="images/slide3.jpg" class="d-block w-100" alt="slide3">
+			    </div>
+			    div class="carousel-item">
+			      <img src="images/slide4.jpg" class="d-block w-100" alt="slide4">
+			   </div>
+			</div>
+		</div> -->
 		<div class="bottom">
-			<div>
+			<div class="text">
 				<h3>Offer of the week</h3>
 				<p>
-					Throughout the week, D.cake will offer delicious wedding cakes, cupcakes, cookies, fresh roasted coffee and custom cakes for every occasion! Choose one from our menu or create your own bespoke masterpiece! Fresh from D.cake Shop, customised for you. 
+					 Throughout the week, D.cake will offer delicious wedding cakes, 
+					cupcakes, cookies, fresh roasted coffee and custom cakes for every 
+					occasion! Choose one from our menu or create your own bespoke 
+					 masterpiece! Fresh from D.cake Shop, customised for you. 
 				</p>
-				<button id="check_menu">Check our menu</button>
+				<button type="button" id="check-menu">Check our menu</button>
 			</div>
-			<div>
-				<!-- <img src="images/offer.png"> -->
+			<div class="acake">
+				<img src="images/offer.png">
 			</div>
 		</div>
 	</div>
 
 	<!-- Block2 -->
 	<div class="section2">
-		<div class="About_us">
+		<div class="about-us">
 			<h1>about us</h1>
-			<div></div>
+			<div class="line"><i class="fa-solid fa-cupcake"></i></div>
 			<h2>Baking Delicious cakes since 1980</h2>
 			<p>
-				<span id="Dcake">D.cake</span> was found by four bakers in 1980 in Vietnam, and became a great success soon after. One of the bakers had a daughter named Duyen and the rest of the bakers were happy to name the business the D.cake.
+				<span id="Dcake"> D.cake</span> was found by four bakers in 1980 in Vietnam, and became a great success soon after. One of the bakers had a daughter named Duyen and the rest of the bakers were happy to name the business the D.cake.
 			</p>
 			<p>
 				Over the years determination to adhering to the incredible cake and pastry recipes brought by these bakers was the key in D.cake's grand success. The four bakers compiled all their best recipes in one single book. Today, the very old and mostly hand written recipe book is kept at D.cake in Vietnam. Although the pages are partially torn and discolored, it still functions as “the go to book” when there is any doubt among the young bakers and cake artists.
@@ -68,44 +94,44 @@
 				The mission of D.cake is never to give in to less than ideal and offer the finest products and services to our customers. As a team, we take pride in the quality we present and cherishing our customers’ trust and loyalty in us. 
 
 			</p>
-		</div>
-		<div class="content">
-			<div class="container1">
+			<div class="content">
+				<div class="container1">
+					<div class="row">
+						<div class="col-md-4">
+							<img src="images/content1.png">
+							<h3>Make with love</h3>
+						</div>
+						<div class="col-md-4">
+							<img src="images/content2.png">
+							<h3>Seasonal pastries</h3>
+						</div>
+						<div class="col-md-4">
+							<img src="images/content3.png">
+							<h3>Event catering</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container2">
 				<div class="row">
 					<div class="col-md-4">
-						<img src="images/content1.png">
+						<img src="images/content4.png">
 						<h3>Make with love</h3>
 					</div>
 					<div class="col-md-4">
-						<img src="images/content2.png">
+						<img src="images/content5.png">
 						<h3>Seasonal pastries</h3>
 					</div>
 					<div class="col-md-4">
-						<img src="images/content3.png">
+						<img src="images/content4.png">
 						<h3>Event catering</h3>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="container2">
-			<div class="row">
-				<div class="col-md-4">
-					<img src="images/content4.png">
-					<h3>Make with love</h3>
-				</div>
-				<div class="col-md-4">
-					<img src="images/content5.png">
-					<h3>Seasonal pastries</h3>
-				</div>
-				<div class="col-md-4">
-					<img src="images/content4.png">
-					<h3>Event catering</h3>
-				</div>
-			</div>
-		</div>
-		<div class="clients_cmt">
+		<div class="clients">
 			<h1>What our clients say</h1>
-			<div></div>
+			<div class="line"><i class="fa-solid fa-cupcake"></i></div>
 		</div>
 	</div>
 	<!-- Block3 -->
