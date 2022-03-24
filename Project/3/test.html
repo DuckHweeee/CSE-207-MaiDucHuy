@@ -2,15 +2,18 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>cupcake</title>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="cupcake.css">
 	<script src="https://kit.fontawesome.com/be15ecbbbf.js" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript" src="project.js"></script>
 </head>
 <body>
 	<!-- Block1 -->
 	<div class="section1">
-		<div class="top">
+		<div class="top-b1">
 			<div class="logo">
 				<img src="images/D.Cake.png">
 			</div>
@@ -55,9 +58,9 @@
 			   </div>
 			</div>
 		</div> -->
-		<div class="bottom">
+		<div class="bottom-b1">
 			<div class="text">
-				<h3>Offer of the week</h3>
+				<h2>Offer of the week</h2>
 				<p>
 					 Throughout the week, D.cake will offer delicious wedding cakes, 
 					cupcakes, cookies, fresh roasted coffee and custom cakes for every 
@@ -76,7 +79,8 @@
 	<div class="section2">
 		<div class="about-us">
 			<h1>about us</h1>
-			<div class="line"><i class="fa-solid fa-cupcake"></i></div>
+			<div id="line"></div>
+			<i class="fa-solid fa-cupcake"></i>
 			<h2>Baking Delicious cakes since 1980</h2>
 			<p>
 				<span id="Dcake"> D.cake</span> was found by four bakers in 1980 in Vietnam, and became a great success soon after. One of the bakers had a daughter named Duyen and the rest of the bakers were happy to name the business the D.cake.
@@ -98,16 +102,28 @@
 				<div class="container1">
 					<div class="row">
 						<div class="col-md-4">
-							<img src="images/content1.png">
-							<h3>Make with love</h3>
+							<div id="icon">
+								<img src="images/content1.png">
+							</div>
+							<div id="text">
+								<h3>Make with love</h3>
+							</div>	
 						</div>
 						<div class="col-md-4">
-							<img src="images/content2.png">
-							<h3>Seasonal pastries</h3>
+							<div id="icon">
+								<img src="images/content2.png">
+							</div>
+							<div id="text">
+								<h3>Seasonal pastries</h3>
+							</div>
 						</div>
 						<div class="col-md-4">
-							<img src="images/content3.png">
-							<h3>Event catering</h3>
+							<div id="icon">
+								<img src="images/content3.png">
+							</div>
+							<div id="text">
+								<h3>Event catering</h3>
+							</div>	
 						</div>
 					</div>
 				</div>
@@ -115,49 +131,121 @@
 			<div class="container2">
 				<div class="row">
 					<div class="col-md-4">
-						<img src="images/content4.png">
-						<h3>Make with love</h3>
+						<div id="icon2">
+							<img src="images/content4.png">
+						</div>
+						<div id="text">
+							<h3>Make with love</h3>
+						</div>
 					</div>
 					<div class="col-md-4">
-						<img src="images/content5.png">
-						<h3>Seasonal pastries</h3>
+						<div id="icon2">
+							<img src="images/content5.png">
+						</div>
+						<div id="text">
+							<h3>%100 homemade</h3>
+						</div>
 					</div>
 					<div class="col-md-4">
-						<img src="images/content4.png">
-						<h3>Event catering</h3>
+						<div id="icon2">
+							<img src="images/content4.png">
+						</div>
+						<div id="text">
+							<h3>Event catering</h3>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 		<div class="clients">
 			<h1>What our clients say</h1>
-			<div class="line"><i class="fa-solid fa-cupcake"></i></div>
+			<div id="line-clients"><i class="fa-solid fa-cupcake"></i></div>
 		</div>
 	</div>
+
+	<!-- Go to top button -->
+	<span id="GoTop"><i class="fa-solid fa-angle-up"></i></span>
+
 	<!-- Block3 -->
 	<div class="section3">
+		<h1>Our services</h1>
+		<div id="line"><i class="fa-solid fa-cupcake"></i></div>
 		<div>
 			<div class="container">
 				<div class="row">
 					<div class="col-md-4">
-						<img src="images/healthy.jpg">
+						<!-- <div><img src="images/healthy.jpg"></div> -->
+						<div class="border">
+							<h3>Healthy Option</h3>
+							<p>
+							We can ensure you that no matter what your favourite desserts may be, there will always be a Superyummy way to tweak it to make a more nourishing and body-loving version of it. 
+							</p>
+							<div id="more-Btn">
+								<button>More</button>
+							</div>
+						</div>
 					</div>
 					<div class="col-md-4">
-						<img src="images/event.jpg">
+						<!-- <div><img src="images/event.jpg"></div> -->
+						<div class="border">
+							<h3>Corporate Events</h3>
+							<p>
+								We can make impressive and delicious cakes for your organisation for any occasion, including product launches, anniversaries, team building events, retirements, and much more. 
+							</p>
+							<div id="more-Btn">
+								<button>More</button>
+							</div>
+						</div>
 					</div>
 					<div class="col-md-4">
-						<img src="images/pastries.jpg">
+						<!-- <div><img src="images/pastries.jpg"></div> -->
+						<div class="border">
+							<h3>Pastries</h3>
+							<p>
+								Our pastries are baked fresh daily in our Revent oven. We have a wide variety of pastries from the sweet to the savory, from classic Italian favorites to our very own modern creations.
+							</p>
+							<div id="more-Btn">
+								<button >More</button>
+							</div>
+						</div>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-md-4">
-						<img src="images/birthday.jpg">
+						<!-- <div><img src="images/birthday.jpg"></div> -->
+						<div class="border">
+							<h3>Birthday</h3>
+							<p>
+								Whatever you’re looking for we have it, whether that’s a child's birthday cake a women's birthday cake, a men's birthday cake, a number cake or your own creation! 
+							</p>
+							<div id="more-Btn">
+								<button>More</button>
+							</div>
+						</div>
 					</div>
 					<div class="col-md-4">
-						<img src="images/custom.jpg">
+						<!-- <div><img src="images/custom.jpg"></div> -->
+						<div class="border">
+							<h3>Custom Cake</h3>
+							<p>
+								We create exceptional wedding and special event cakes that embody your individual personality and tastes. Our bakers enjoy working with you to create a cake that is both beautiful and delicious. 
+							</p>
+							<div id="more-Btn">
+								<button>More</button>
+							</div>
+						</div>
 					</div>
 					<div class="col-md-4">
-						<img src="images/wedding.jpg">
+						<!-- <div><img src="images/wedding.jpg"></div> -->
+						<div class="border">
+							<h3>Wedding</h3>
+							<p>
+								Your special day deserves a very special cake! Choose one of our ready-to-order designs or arrange a consultation to create a completely bespoke wedding cake. See our gallery for inspiration. 
+							</p>
+							<div id="more-Btn">
+								<button>More</button>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -166,7 +254,7 @@
 	<!-- Block 4 -->
 	<div class="section4">
 		<h1>Our menu</h1>
-        <div></div>
+        <div id="line"><i class="fa-solid fa-cupcake"></i></div>
         <div class="bottom">
         	<div class="container">
         		<div class="row">
@@ -175,7 +263,12 @@
         			</div>
         			<div class="col-md-6">
         				<h3>100 cakes to choose</h3>
-        				<p></p>
+        				<p>
+        					Cake are special. Every birthday, evey celebration ends with something
+        				</p>
+        				<p>
+        					sweer, a cake, and people rememver. It's all about the memomries.
+        				</p>
         				<button id="message">
         					Send us a message
         				</button>
@@ -187,38 +280,56 @@
 	<!-- Block5 -->
 	<div class="section5">
 		<h1>Our price</h1>
-		<div></div>
+		<div id="line"><i class="fa-solid fa-cupcake"></i></div>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-4">
+					<div class="surr">
 					<h3>Basic event</h3>
-					<b>$100</b>
-					<p>20 Pastries</p>
-					<p>2Cakes</p>
-					<p>30Cupcakes</p>
+					<h4 class="price">$100</h4>
+					<div class="text-b5">
+					<p><b>20</b> Pastries</p>
+					<p><b>2</b>Cakes</p>
+					<p><b>30</b>Cupcakes</p>
 					<p>Perfect for Small Events</p>
 					<p>Serves up to 20 peope</p>
-					<button>Contact</button>
+					</div>
+					<div id="contact-Btn">
+						<button>Contact</button>
+					</div>
+					</div>
 				</div>
 				<div class="col-md-4">
+					<div class="surr">
 					<h3>Medium event</h3>
-					<b>$250</b>
-					<p>50 Pastries</p>
-					<p>6Cakes</p>
-					<p>70Cupcakes</p>
+					<h4 class="price">$250</h4>
+					<div class="text-b5">
+					<p><b>50</b> Pastries</p>
+					<p><b>6</b>Cakes</p>
+					<p><b>70</b>Cupcakes</p>
 					<p>Perfect for Medium Events</p>
 					<p>Serves up to 50 peope</p>
-					<button>Contact</button>
+					</div>
+					<div id="contact-Btn">
+						<button>Contact</button>
+					</div>
+					</div>
 				</div>
 				<div class="col-md-4">
+					<div class="surr">
 					<h3>Mega event</h3>
-					<b>$550</b>
-					<p>100 Pastries</p>
-					<p>10Cakes</p>
-					<p>130Cupcakes</p>
+					<h4 class="price">$550</h4>
+					<div class="text-b5">
+					<p><b>100</b> Pastries</p>
+					<p><b>10</b>Cakes</p>
+					<p><b>130</b>Cupcakes</p>
 					<p>Perfect for Lagre Events</p>
 					<p>Serves up to 100 peope</p>
-					<button>Contact</button>
+					</div>
+					<div id="contact-Btn">
+						<button>Contact</button>
+					</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -226,56 +337,155 @@
 	<!-- Block6 -->
 	<div class="section6">
 		<h1>Our gallery</h1>
-		<div></div>
+		<div id="line"><i class="fa-solid fa-cupcake"></i></div>
 
 	</div>
 	<!-- Block7 -->
 	<div class="section7">
 		<h1>Our team</h1>
-		<div></div>
+		<div id="line"><i class="fa-solid fa-cupcake"></i></div>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-4">
-					<img src="images/team1.jpg">
+					<div class="team-pics">
+						<img src="images/team5.jpg" alt="person1" class="image">
+					</div>
+					<div class="overlay">
+						<div class="text-b7">
+							<h3>Amanda jr</h3>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4" >
+					<div class="team-pics">
+						<img src="images/team1.jpg" alt="person2" class="image">
+					</div>
+					<div class="overlay">
+						<div class="text-b7">
+							<h3>David</h3>
+							<h3>Head baker</h3>
+							<p>
+								David trained and worked at international bakery in Vietnam gaining experience in bread making, cake decorating, and pastry production.
+							</p>
+							<p>
+								He goes fishing, but we are yet to see a fish he caught, and he likes heavy-oaky red wines.
+							</p>
+						</div>
+					</div>
 				</div>
 				<div class="col-md-4">
-					<img src="images/team2.jpg">
-				</div>
-				<div class="col-md-4">
-					<img src="images/team3.jpg">
+					<div class="team-pics">
+						<img src="images/team4.jpg" alt="person4" class="image">
+					</div>
+					<div class="overlay">
+						<div class="text-b7">
+							<h3>DEAN ANDERSON</h3>
+							<h3>SENIOR CHEF INSTRUCTOR</h3>
+							<p>
+								Dane, despite being a beaker, can do about 15 things at once. You could catch a glimpse of him in D.cake working 100 miles an hour while giving instructions to an apprentice and also answering a customer's question while watching over everything else around.
+							</p>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-4">
-					<img src="images/team4.jpg">
+					<div class="team-pics">
+						<img src="images/team2.jpg" alt="person5" class="image">
+					</div>
+					<div class="overlay">
+						<div class="text-b7">
+							<h3>Gina Walker</h3>
+						</div>
+					</div>
 				</div>
 				<div class="col-md-4">
-					<img src="images/team5.jpg">
+					<div class="team-pics">
+						<img src="images/team3.jpg" alt="person6" class="image">
+					</div>
+					<div class="overlay">
+						<div class="text-b7">
+							<h3>Hana Lee</h3>
+						</div>
+					</div>
 				</div>
 				<div class="col-md-4">
-					<img src="images/team6.jpg">
+					<div class="team-pics">
+						<img src="images/team6.jpg">
+					</div>
+					<div class="overlay">
+						<div class="text-b7">
+							<h3>Mike Oxmall</h3>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 	<!-- Block8 -->
 	<div class="section8">
-		<div class="top">
-			<div class="contact">
-				<h1>Contact us</h1>
-				<div></div>
-				<h3>Get in touch with us</h3>
-				<p>ĐHQT Miền Đông</p>
-				<p>+84 334387518</p>
-				<p>duyen.nguyen.set18@eiu.edu.vn</p>
-
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7">
+					<div class="info">
+						<h1>Contact us</h1>
+						<div id="line">
+							<i class="fa-solid fa-cupcake"></i>
+						</div>
+						<h3>Get in touch with us</h3>
+						<p id="location">ĐHQT Miền Đông</p>
+						<i class="fa-solid fa-location-dot"></i>
+						<p id="number">+84 334387518</p>
+						<i class="fa-solid fa-phone-flip"></i>
+						<p id="mail">duyen.nguyen.set18@eiu.edu.vn</p>
+						<i class="fa-solid fa-envelope"></i>
+					</div>
+					<div>
+						<form>
+							<input type="text" name="name" id="name" placeholder="Name">
+							<input type="text" name="email" id="email" placeholder="Email">
+							<input type="text" name="subject" id="subject"placeholder="Subject">
+							<textarea id="message"placeholder="Enter your message"></textarea>
+							<button id="send-message">Send message</button>
+						</form>
+					</div>
+				</div>
 			</div>
-			<div class="image">
-				<img src="images/macarons.png">
+			<div class="row">
+				<div class="col-md-5">
+				<div class="macarons">
+					<img src="images/macarons.png">
+				</div>
+			</div>
 			</div>
 		</div>
-		<div class="bottom">
-			<img src="images/D.cake.png">
+		<div class="bottom-b8">
+			<div>
+				<img src="images/D.cake.png">
+			</div>
+			<div>
+				<i class="fa-brands fa-twitter"></i>
+			</div>
+			<div>
+				<i class="fa-brands fa-facebook-f"></i>
+			</div>
+			<div>
+				<i class="fa-brands fa-linkedin-in"></i>
+			</div>
+			<div>
+				<i class="fa-brands fa-pinterest"></i>
+			</div>
+			<div>
+				<i class="fa-brands fa-instagram"></i>
+			</div>
+			<p>ABOUT US</p>
+			<p>An Old World tradition.</p>
+			<p>From Vietnam to America to you.</p>
+			<p>OPENING HOURS:</p>
+			<p>Monday to Friday 7 a.m to 7 p.m.</p>
+			<hr>
+			<p>Weekends / Holidays Closed</p>
+			<p>Copyright &copy; - D.cake.All Right Reserved.</p>
 		</div>
 	</div>
 </body>
