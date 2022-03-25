@@ -4,8 +4,14 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>cupcake</title>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 	<link rel="stylesheet" type="text/css" href="cupcake.css">
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
 	<script src="https://kit.fontawesome.com/be15ecbbbf.js" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script type="text/javascript" src="project.js"></script>
@@ -42,22 +48,23 @@
 			</div>
 		</div>
 	
-		<!-- <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-			<div class="carousel-inner">
-			    <div class="carousel-item active">
-			        <img src="images/slide1.jpg" class="d-block w-100" alt="slide1">
-			    </div>
-			    <div class="carousel-item">
-			      <img src="images/slide2.jpg" class="d-block w-100" alt="slide2">
-			    </div>
-			    <div class="carousel-item">
-			      <img src="images/slide3.jpg" class="d-block w-100" alt="slide3">
-			    </div>
-			    div class="carousel-item">
-			      <img src="images/slide4.jpg" class="d-block w-100" alt="slide4">
-			   </div>
-			</div>
-		</div> -->
+		<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+		  <div class="carousel-inner">
+		    <div class="carousel-item active">
+		      <img class="d-block w-100" src="images/slider1.jpg" alt="First slide">
+		    </div>
+		    <div class="carousel-item">
+		      <img class="d-block w-100" src="images/slider2.jpg" alt="Second slide">
+		    </div>
+		    <div class="carousel-item">
+		      <img class="d-block w-100" src="images/slider3.jpg" alt="Third slide">
+		    </div>
+		    <div class="carousel-item">
+		      <img class="d-block w-100" src="images/slider4.jpg" alt="Fourth slide">
+		    </div>
+		  </div>
+		</div>
+
 		<div class="bottom-b1">
 			<div class="text">
 				<h2>Offer of the week</h2>
@@ -158,9 +165,65 @@
 			</div>
 		</div>
 		<div class="clients">
-			<h1>What our clients say</h1>
-			<div id="line-clients"><i class="fa-solid fa-cupcake"></i></div>
-		</div>
+			<div id="myCarousel" class="carousel slide" data-ride="carousel">
+				<ol class="carousel-indicators">
+				    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				    <li data-target="#myCarousel" data-slide-to="1"></li>
+				    <li data-target="#myCarousel" data-slide-to="2"></li>
+				</ol>
+
+				<div class="carousel-inner">
+				    <div class="item active">
+				      <div class="carousel-caption">
+				      	<h3>
+					      What our clients say
+					    </h3>
+					    <div></div>
+						<p>
+						"Everyone is so pleasant ! Delicious cookies and delicious coffee ground the way I like it. Thank you!"
+						</p>
+						<p>-Susan B-</p>
+				      </div>
+				    </div>
+
+				    <div class="item">
+				      <div class="carousel-caption">
+				      	<h3>
+					      What our clients say
+					    </h3>
+					    <div></div>
+						<p>
+						"Fantastic experience from order to pick up! Everyone loved the Princess cake! Thank you!"
+						</p>
+						<p>-Chase M.</p>
+				      </div>
+				    </div>
+
+				    <div class="item">
+				      <div class="carousel-caption">
+				      	<h3>
+					      What our clients say
+					    </h3>
+					    <div></div>
+						<p>
+						"I just had the princess cake from D.cake and it changed my life. It is literally a ray of light in these dark times. I think about it even when I'm not eating it."
+						</p>
+						<p>- Astrid S.</p>
+				      </div>
+				    </div>
+				  </div>
+
+				  <!-- Left and right controls -->
+				   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+				    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				    <span class="sr-only">Previous</span>
+				   </a>
+				   <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+				    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+				    <span class="sr-only">Next</span>
+				   </a>
+				</div>
+			</div>
 	</div>
 
 	<!-- Go to top button -->
@@ -172,9 +235,11 @@
 		<div id="line"><i class="fa-solid fa-cupcake"></i></div>
 		<div>
 			<div class="container">
-				<div class="row">
-					<div class="col-md-4">
-						<!-- <div><img src="images/healthy.jpg"></div> -->
+				<div class="row1">
+					<div class="col1">
+						<div class="circle">
+							<img src="images/healthy.jpg">
+						</div>
 						<div class="border">
 							<h3>Healthy Option</h3>
 							<p>
@@ -185,8 +250,10 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-4">
-						<!-- <div><img src="images/event.jpg"></div> -->
+					<div class="col1">
+						<div class="circle">
+							<img src="images/event.jpg">
+						</div>
 						<div class="border">
 							<h3>Corporate Events</h3>
 							<p>
@@ -197,8 +264,10 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-4">
-						<!-- <div><img src="images/pastries.jpg"></div> -->
+					<div class="col1">
+						<div class="circle">
+							<img src="images/pastries.jpg">
+						</div>
 						<div class="border">
 							<h3>Pastries</h3>
 							<p>
@@ -210,9 +279,11 @@
 						</div>
 					</div>
 				</div>
-				<div class="row">
-					<div class="col-md-4">
-						<!-- <div><img src="images/birthday.jpg"></div> -->
+				<div class="row2">
+					<div class="col2">
+						<div class="circle">
+							<img src="images/birthday.jpg">
+						</div>
 						<div class="border">
 							<h3>Birthday</h3>
 							<p>
@@ -223,8 +294,10 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-4">
-						<!-- <div><img src="images/custom.jpg"></div> -->
+					<div class="col2">
+						<div class="circle">
+							<img src="images/custom.jpg">
+						</div>
 						<div class="border">
 							<h3>Custom Cake</h3>
 							<p>
@@ -235,8 +308,10 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-4">
-						<!-- <div><img src="images/wedding.jpg"></div> -->
+					<div class="col2">
+						<div class="circle">
+							<img src="images/wedding.jpg">
+						</div>
 						<div class="border">
 							<h3>Wedding</h3>
 							<p>
@@ -254,29 +329,302 @@
 	<!-- Block 4 -->
 	<div class="section4">
 		<h1>Our menu</h1>
-        <div id="line"><i class="fa-solid fa-cupcake"></i></div>
-        <div class="bottom">
-        	<div class="container">
-        		<div class="row">
-        			<div class="col-md-6">
-        				<img src="images/100cakes.jpg">
-        			</div>
-        			<div class="col-md-6">
-        				<h3>100 cakes to choose</h3>
-        				<p>
-        					Cake are special. Every birthday, evey celebration ends with something
-        				</p>
-        				<p>
-        					sweer, a cake, and people rememver. It's all about the memomries.
-        				</p>
-        				<button id="message">
-        					Send us a message
-        				</button>
-        			</div>
-        		</div>
-        	</div>
+        <div id="line">
+        	<i class="fa-solid fa-cupcake"></i>
         </div>
-	</div>
+
+        <div class="tab">
+			<button class="tablinks" onmouseover ="openCity(event, 'cakes')">cakes</button>
+			<button class="tablinks" onmouseover ="openCity(event, 'patries')">Patries</button>
+			<button class="tablinks" onmouseover ="openCity(event, 'sweets')">sweets</button>
+		</div>
+
+<div id="cakes" class="tabcontent">
+  <div class="cakeandpie">cake & pies</div>
+    <div class="ourmenu">
+      <div class="bl4_cols1">
+            <div class="img">
+                <img src="images/menu1.jpg">
+                <p>our famous forest cake</p>
+            </div> 
+            <div class="cake">
+                <h6>chocolate cake</h6>
+                <div class="bl4_layout">
+	                <div class="dot"></div>
+	                <div class="price">$5.5</div>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy. Homemade Apple Pie </p>
+            </div>
+
+              <div class="cake">
+                <h6>homemade apple pie</h6>
+                <div class="bl4_layout">
+                  <div class="dot"></div>
+                  <div class="price">$5.5</div>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy. Homemade Apple Pie </p>
+              </div>
+              <div class="cake">
+                <h6>special cake</h6>
+                <div class="bl4_layout">
+                  <div class="dot"></div>
+                  <div class="price">$5.5</div>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy. Homemade Apple Pie </p>
+              </div>
+          </div> 
+          
+          <div class="bl4_cols2">
+            <div class="cake">
+                <h6>cheesecake</h6>
+                <div class="bl4_layout">
+                  <div class="dot"></div>
+                  <div class="price">$5.5</div>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy. Homemade Apple Pie </p>
+              </div>
+              <div class="cake">
+                <h6>vanila cake</h6>
+                <div class="bl4_layout">
+                  <div class="dot"></div>
+                  <div class="price">$5.5</div>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy. Homemade Apple Pie </p>
+              </div>
+              <div class="cake">
+                <h6>forest cake</h6>
+                <div class="bl4_layout">
+                  <div class="dot"></div>
+                  <div class="price">$5.5</div>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy. Homemade Apple Pie </p>
+              </div>
+              <div class="cake">
+                <h6>boston cream pie</h6>
+                <div class="bl4_layout">
+                  <div class="dot"></div>
+                  <div class="price">$5.5</div>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy. Homemade Apple Pie </p>
+              </div>
+              <div class="cake">
+                <h6>brownie</h6>
+                <div class="bl4_layout">
+                  <div class="dot"></div>
+                  <div class="price">$5.5</div>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy. Homemade Apple Pie </p>
+              </div>
+              <div class="cake">
+                <h6>butter cake</h6>
+                <div class="bl4_layout">
+                  <div class="dot"></div>
+                  <div class="price">$5.5</div>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy. Homemade Apple Pie </p>
+              </div>
+          </div>
+    </div>
+</div>
+
+<div id="patries" class="tabcontent">
+  <div class="cakeandpie">cake & pies</div>
+    <div class="ourmenu">
+      <div class="bl4_cols1">
+            <div class="img">
+                <img src="images/menu2.jpg">
+                <p>our famous forest cake</p>
+              </div> 
+              <div class="cake">
+                <h6>chocolate cake</h6>
+                <div class="bl4_layout">
+                  <div class="dot"></div>
+                  <div class="price">$5.5</div>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy. Homemade Apple Pie </p>
+              </div>
+
+              <div class="cake">
+                <h6>homemade apple pie</h6>
+                <div class="bl4_layout">
+                  <div class="dot"></div>
+                  <div class="price">$5.5</div>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy. Homemade Apple Pie </p>
+              </div>
+              <div class="cake">
+                <h6>special cake</h6>
+                <div class="bl4_layout">
+                  <div class="dot"></div>
+                  <div class="price">$5.5</div>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy. Homemade Apple Pie </p>
+              </div>
+          </div> 
+            
+
+
+          <div class="bl4_cols2">
+            <div class="cake">
+                <h6>cheesecake</h6>
+                <div class="bl4_layout">
+                  <div class="dot"></div>
+                  <div class="price">$5.5</div>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy. Homemade Apple Pie </p>
+              </div>
+              <div class="cake">
+                <h6>vanila cake</h6>
+                <div class="bl4_layout">
+                  <div class="dot"></div>
+                  <div class="price">$5.5</div>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy. Homemade Apple Pie </p>
+              </div>
+              <div class="cake">
+                <h6>forest cake</h6>
+                <div class="bl4_layout">
+                  <div class="dot"></div>
+                  <div class="price">$5.5</div>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy. Homemade Apple Pie </p>
+              </div>
+              <div class="cake">
+                <h6>boston cream pie</h6>
+                <div class="bl4_layout">
+                  <div class="dot"></div>
+                  <div class="price">$5.5</div>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy. Homemade Apple Pie </p>
+              </div>
+              <div class="cake">
+                <h6>brownie</h6>
+                <div class="bl4_layout">
+                  <div class="dot"></div>
+                  <div class="price">$5.5</div>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy. Homemade Apple Pie </p>
+              </div>
+              <div class="cake">
+                <h6>butter cake</h6>
+                <div class="bl4_layout">
+                  <div class="dot"></div>
+                  <div class="price">$5.5</div>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy. Homemade Apple Pie </p>
+              </div>
+          </div>
+    </div>
+</div>
+
+<div id="sweets" class="tabcontent">
+ <div class="cakeandpie">cake & pies</div>
+    <div class="ourmenu">
+      <div class="bl4_cols1">
+            <div class="img">
+                <img src="images/menu3.jpg">
+                <p>our famous forest cake</p>
+              </div> 
+              <div class="cake">
+                <h6>chocolate cake</h6>
+                <div class="bl4_layout">
+                  <div class="dot"></div>
+                  <div class="price">$5.5</div>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy. Homemade Apple Pie </p>
+              </div>
+
+              <div class="cake">
+                <h6>homemade apple pie</h6>
+                <div class="bl4_layout">
+                  <div class="dot"></div>
+                  <div class="price">$5.5</div>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy. Homemade Apple Pie </p>
+              </div>
+              <div class="cake">
+                <h6>special cake</h6>
+                <div class="bl4_layout">
+                  <div class="dot"></div>
+                  <div class="price">$5.5</div>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy. Homemade Apple Pie </p>
+              </div>
+          </div> 
+            
+
+
+          <div class="bl4_cols2">
+            <div class="cake">
+                <h6>cheesecake</h6>
+                <div class="bl4_layout">
+                  <div class="dot"></div>
+                  <div class="price">$5.5</div>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy. Homemade Apple Pie </p>
+              </div>
+              <div class="cake">
+                <h6>vanila cake</h6>
+                <div class="bl4_layout">
+                  <div class="dot"></div>
+                  <div class="price">$5.5</div>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy. Homemade Apple Pie </p>
+              </div>
+              <div class="cake">
+                <h6>forest cake</h6>
+                <div class="bl4_layout">
+                  <div class="dot"></div>
+                  <div class="price">$5.5</div>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy. Homemade Apple Pie </p>
+              </div>
+              <div class="cake">
+                <h6>boston cream pie</h6>
+                <div class="bl4_layout">
+                  <div class="dot"></div>
+                  <div class="price">$5.5</div>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy. Homemade Apple Pie </p>
+              </div>
+              <div class="cake">
+                <h6>brownie</h6>
+                <div class="bl4_layout">
+                  <div class="dot"></div>
+                  <div class="price">$5.5</div>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy. Homemade Apple Pie </p>
+              </div>
+              <div class="cake">
+                <h6>butter cake</h6>
+                <div class="bl4_layout">
+                  <div class="dot"></div>
+                  <div class="price">$5.5</div>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy. Homemade Apple Pie </p>
+              </div>
+          </div>
+    </div>
+</div>
+
+		<div class="bottom-b4">
+    			<div class="left-side">
+    				<img src="images/100cakes.jpg">
+    			</div>
+    			<div class="right-side">
+    				<h3>100 cakes to choose</h3>
+    				<p>
+    					Cake are special. Every birthday, evey celebration ends with something
+    				</p>
+    				<p>
+    					sweer, a cake, and people rememver. It's all about the memomries.
+    				</p>
+    				<button id="message">
+    					Send us a message
+    				</button>
+    			</div>
+		</div>
+    </div>
 	<!-- Block5 -->
 	<div class="section5">
 		<h1>Our price</h1>
@@ -286,7 +634,7 @@
 				<div class="col-md-4">
 					<div class="surr">
 					<h3>Basic event</h3>
-					<h4 class="price">$100</h4>
+					<h4 class="prices">$100</h4>
 					<div class="text-b5">
 					<p><b>20</b> Pastries</p>
 					<p><b>2</b>Cakes</p>
@@ -302,7 +650,7 @@
 				<div class="col-md-4">
 					<div class="surr">
 					<h3>Medium event</h3>
-					<h4 class="price">$250</h4>
+					<h4 class="prices">$250</h4>
 					<div class="text-b5">
 					<p><b>50</b> Pastries</p>
 					<p><b>6</b>Cakes</p>
@@ -318,7 +666,7 @@
 				<div class="col-md-4">
 					<div class="surr">
 					<h3>Mega event</h3>
-					<h4 class="price">$550</h4>
+					<h4 class="prices">$550</h4>
 					<div class="text-b5">
 					<p><b>100</b> Pastries</p>
 					<p><b>10</b>Cakes</p>
@@ -338,7 +686,27 @@
 	<div class="section6">
 		<h1>Our gallery</h1>
 		<div id="line"><i class="fa-solid fa-cupcake"></i></div>
-
+		<div class="bl6_rows">
+			<div class="bl6_cols1">
+				<img src="images/gallery1.jpg">
+				<img src="images/gallery4.jpg">
+				<img src="images/gallery8.jpg">
+				<img src="images/gallery10.jpg">
+				<img src="images/gallery12.jpg">
+			</div>
+			<div class="bl6_cols2">
+				<img src="images/gallery2.jpg">
+				<img src="images/gallery6.jpg">
+				<img src="images/gallery9.jpg">
+				<img src="images/gallery13.jpg">
+			</div>
+			<div class="bl6_cols3">
+				<img src="images/gallery3.jpg">
+				<img src="images/gallery5.jpg">
+				<img src="images/gallery7.jpg">
+				<img src="images/gallery11.jpg">
+			</div>
+		</div>
 	</div>
 	<!-- Block7 -->
 	<div class="section7">
@@ -424,40 +792,40 @@
 	</div>
 	<!-- Block8 -->
 	<div class="section8">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-7">
-					<div class="info">
-						<h1>Contact us</h1>
-						<div id="line">
-							<i class="fa-solid fa-cupcake"></i>
-						</div>
-						<h3>Get in touch with us</h3>
-						<p id="location">ĐHQT Miền Đông</p>
-						<i class="fa-solid fa-location-dot"></i>
-						<p id="number">+84 334387518</p>
-						<i class="fa-solid fa-phone-flip"></i>
-						<p id="mail">duyen.nguyen.set18@eiu.edu.vn</p>
-						<i class="fa-solid fa-envelope"></i>
-					</div>
+		<div class="top-b8">
+			<div class="info">
+				<h1>Contact us</h1>
+				<div id="line">
+					<i class="fa-solid fa-cupcake"></i>
+				</div>
+				<div id="intouch">
+					<h3>Get in touch with us</h3>
 					<div>
-						<form>
-							<input type="text" name="name" id="name" placeholder="Name">
-							<input type="text" name="email" id="email" placeholder="Email">
-							<input type="text" name="subject" id="subject"placeholder="Subject">
-							<textarea id="message"placeholder="Enter your message"></textarea>
-							<button id="send-message">Send message</button>
-						</form>
+						<span>ĐHQT Miền Đông</span>
+						<span><i class="fa-solid fa-location-dot"></i></span>
+						<span><i class="fa-solid fa-phone-flip"></i></span>
+						<span>+84 334387518</span>
+
 					</div>
+					
+					<i class="fa-solid fa-envelope"></i>
+					<span id="mail">duyen.nguyen.set18@eiu.edu.vn</span>
+					
+				</div>
+				<div id="submit">
+					<form>
+						<div><input type="text" name="name" id="name" placeholder="Name"></div>
+						<div><input type="text" name="email" id="email" placeholder="Email"></div>
+						<div><input type="text" name="subject" id="subject"placeholder="Subject"></div>
+						<div><textarea id="message"placeholder="Enter your message"></textarea></div>
+						<button id="send-message">Send message</button>
+					</form>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-md-5">
-				<div class="macarons">
-					<img src="images/macarons.png">
-				</div>
+			<div class="macarons">
+				<img src="images/macarons.png">
 			</div>
-			</div>
+		</div>
 		</div>
 		<div class="bottom-b8">
 			<div>

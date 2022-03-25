@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Problem_5</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="prob5.css">
+</head>
+<body>
+
+	<div id="menubar" class="overlay">
+	  	<a href="javascript:void(0)" class="close" onclick="closemenubar()">&times;</a>
+	  	<div class="overlay-content">
+	    	<a href="#">About</a>
+	    	<a href="#">Services</a>
+	    	<a href="#">Clients</a>
+	    	<a href="#">Contact</a>
+	  	</div>
+	</div>
+
+	<span style="cursor:pointer" onclick="openmenubar()">&#9776;</span>
+
+	<script>
+		function openmenubar() {
+  			document.getElementById("menubar").style.display = "block";
+		}
+
+		function closemenubar() {
+ 			document.getElementById("menubar").style.display = "none";
+		}
+</script>
+     
+</body>
+</html>

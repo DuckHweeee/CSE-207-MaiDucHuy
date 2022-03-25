@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+  	<head>
+	    <!-- Required meta tags -->
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	    <!-- Bootstrap CSS -->
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	    <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel = "stylesheet">
+    	<script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+    	<script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+	    <title>prop7</title>
+  	</head>
+  	<body>	
+  		<form>
+  		<div class="wrap">
+  			<h1>Student Manager System</h1>
+
+  			<div class="row">
+  				<div class="col-3">
+  					<aside class="left-side">
+  						<h1>Class list</h1>
+  						<ul class="danhsach">
+  							<li>Lớp 1</li>
+  							<li>Lớp 2</li>
+  						</ul>
+  					</aside>
+  				</div>
+
+  				<!-- end of col-3 -->
+
+  				<div class="col-9">
+  					<main class="main-content">
+  						<section class="newStudent">
+  							<div class="card-header">
+  								Edit student's information
+  							</div>
+
+  							<div class="groupElement">
+  								<div class="row">
+  									<div class="col-2">
+  										<input type="text"  class="form-control" id="ID" placeholder="Enter student id">
+  									</div>
+
+  									<div class="col-3">
+  										<input type="text" class="form-control" id="Name" placeholder="Enter Your Full Name">
+  									</div>
+
+  									<div class="col-3">
+  										<input type="text" class="form-control" id="Email" placeholder="Enter Your Email">
+  									</div>
+
+  									<div class="col-2">
+  										<select class="form-control" id="Class" name="Class" >
+  										<option value="class1">Lớp 1</option>
+  										<option value="class1">Lớp 2</option>
+  										<option value="class1">Lớp 3</option>
+  										</select>
+  									</div>
+
+  									<div class="col-2">
+  										<input type="hidden" id="Type" value="New">
+  										<button type="button" class="btn btn-primary" id="Submit">Update</button>
+  									</div>
+  								</div>
+  							</div>
+  						</section>
+
+
+  						<section class="group-Tittle">
+  							<div class="card-header">Student list</div>
+  							
+  							<div class="row">
+  								<div class="col-1 Tittle">#</div>
+  								<div class="col-4 Tittle">
+  									<h5>Full name</h5>
+  								</div>
+  								<div class="col-4 Tittle">
+  									<h5>Student Id</h5>
+  								</div>
+  								<div class="col-3 Tittle">
+  									<h5>Function</h5>
+  								</div>
+  							</div>
+  						</section>
+  						<!-- end of group tittle -->
+
+  						<section class="group-List">
+  							<div class="row">
+  								<div class="col-1">1</div>
+  								<div class="col-4">huy</div>
+  								<div class="col-4">123</div>
+  								<div class="col-3">
+  									<button type="button" id="edit">Edit</button>
+  									<button type="button" id="delete">Delete</button>
+  								</div>
+  							</div>
+  						</section>
+  					</main>
+  				</div>
+  			</div>
+  		</div>
+  	</form>
+
+
+ 		<script type="text/javascript">
+ 			$(document).ready(function(){
+ 				let _Products, Depts;
+	 			$.ajax({
+	 				url: 'http://45.32.46.181/getProducts.php',
+	 				type: 'get',
+	 				data: 'GetProducts',
+	 				datatype: 'json'
+	 			}).done(function(All){
+	 				console.log(All);
+	 			})
+
+	 			$.get(
+	 				'http://45.76.156.126/getdata.php',
+	 				{Type :"Department"},
+	 				function(data){
+	 					Depts = data; 
+	 					ShowDepts(Depts);
+	 					console.log(Depts);
+	 				}, "json"
+	 			);
+
+	 			// show depts
+	 			function ShowDepts(_DeptList){
+	 				let _s = "", _option = "";
+	 				for(let _d of _DeptList){
+	 					_s += `<li>${_d}</li>`;
+	 					_option += `<option value="${_d}">${_d}</option>`;
+	 				}
+	 				$(".danhsach").append(_s);
+	 				$("#Dept").append(_option);
+	 			}
+
+	 			// show staffs
+
+	 			function ShowStu(_StuList){
+	 				let _s = "", i= 0;
+	 				for(let _d of _StuList){
+	 					_s += `<div class="row">
+  								<div class="col-1">${++i}</div>
+  								<div class="col-4">${_d.FistName + " " +_d.LastName}</div>
+  								<div class="col-4">${_d.Department}</div>
+  								<div class="col-3">
+  									<button type="button" class="btn Edit" update-id = "${_d.ID}">Edit</button>
+  									<button type="button" class="btn Del" data-id="${ _d.Department }">Delete</button>
+  								</div>
+  							</div>`;
+	 				}
+	 				$(".group-List").html("");
+	 				$(".group-List").append(_s);
+	 			}
+
+
+	 			//sort - defined
+	 			function compareObject(a,b){
+	 				if(a.FistName < b.FistName) return -1;
+	 				if(a.FistName > b.FistName) return 1;
+	 					return 0;
+	 			}	
+
+
+
+	 			//insert
+	 			$("#Submit").click(function(){
+	 				let _ID = $("#ID").val();
+	 				let _FirstName = $("#FirstName").val();
+	 				let _LastName = $("#LastName").val();
+	 				let _Dept = $("#Dept").val();
+
+	 				Staffs.unshift({
+	 					"ID" : _ID,
+	 					"FistName" : _FirstName,
+	 					"LastName" : _LastName,
+	 					"Department" : _Dept
+	 				});
+
+	 				ShowStu(Staffs);
+
+	 			});
+
+	 			// delete
+
+	 			$(".group-List").on("click", ".Del", function(ev){
+	 				let _confirm = confirm("are u sure?");
+	 				let _nodeDel = ev.target;
+	 				_nodeDel = $(_nodeDel);
+	 				let _ID = _nodeDel.attr("data-id");
+	 				let _ID = $(this).attr("data-id");
+	 				for(let _index in Staffs){
+	 					if(Staffs[_index].Department == _ID){
+	 						Staffs.splice(_index, 1);
+	 						break;
+	 					}
+	 				}
+	 				ShowStu(Staffs);
+	 			});
+
+	 			//show by class
+
+	 			$(".danhsach").on("click", "li", function(ev){
+	 				let _nodeDel = ev.target;
+	 				_nodeDel = $(_nodeDel);
+	 				let _Deptname = _nodeDel.text();
+	 				let _Deptname = $(this).text();
+	 				let _tempList = [];
+	 				for(let _d of Staffs){
+	 					if(_d.Department == _Deptname){
+	 						_tempList.push(_d);
+	 					}
+	 				} 
+	 				ShowStu(_tempList);
+	 			});
+
+	 			update
+	 			$(".group-List").on("click", ".Edit", function(ev){
+	 				let _nodeDel = ev.target;
+	 				_nodeDel = $(_nodeDel);
+	 				let _ID = _nodeDel.attr("update-id");
+	 				for(let _index in Staffs){
+	 					if(Staffs[_index].ID == _ID){
+	 						$("#ID").val();
+			 				$("#FirstName").val();
+			 				$("#LastName").val();
+			 				$("#Dept").val();
+	 					}
+	 				}
+	 				ShowStu(Staffs);
+	 			});
+	 			find by name
+ 			});
+ 		</script>
+  	</body>
+</html>
